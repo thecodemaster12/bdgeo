@@ -2,28 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
 import api from "./routes/api.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
-// const upazilaSchema = new mongoose.Schema({
-//   id: Number,
-//   name: String,
-//   bengaliName: String,
-// });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// const districtSchema = new mongoose.Schema({
-//   id: Number,
-//   name: String,
-//   bengaliName: String,
-//   upazilas: [upazilaSchema],
-// });
 
-// const divisionSchema = new mongoose.Schema({
-//   id: Number,
-//   name: String,
-//   bengaliName: String,
-//   districts: [districtSchema],
-// });
-
-// const Division = mongoose.model("Division", divisionSchema);
 const port = process.env.PORT || 3000;
 const mongodb = process.env.MONGODB;
 
@@ -37,6 +22,11 @@ mongoose
   });
 
 const app = express();
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 
 app.use("/api", api);
 
