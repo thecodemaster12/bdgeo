@@ -13,18 +13,25 @@ Bangladesh GeoAPI is a free and open API providing geographical data of Banglade
 ## Technology
 - Node Js
 - Express Js
+- Mongodb Atlas
 
 ## Installation
 
 Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/thecodemaster12/bd-geo-api.git
-cd bd-geo-api
+git clone https://github.com/thecodemaster12/bdgeo.git
+cd bdgeo
 npm install
 ```
 
 ## Usage
+
+Start the server:
+
+```sh
+npm run dev
+```
 
 Start the server:
 
