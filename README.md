@@ -2,13 +2,11 @@
 
 Bangladesh GeoAPI is a free and open API providing geographical data of Bangladesh, including divisions, districts, and upazilas.
 
-## Live Demo
-[Click me](https://bdgeo.vercel.app/)
-
 ## Features
 - Retrieve all divisions, districts, and upazilas.
 - Get districts of a specific division.
 - Get upazilas of a specific district.
+- Connected to MongoDB Atlas for data storage.
 
 ## Technology
 - Node Js
@@ -25,18 +23,22 @@ cd bdgeo
 npm install
 ```
 
+## Environment Variables
+
+Create a `.env` file in the root directory and add the following:
+
+```
+MONGODB=your_mongodb_connection_string
+```
+
+Replace `your_mongodb_connection_string` with your actual MongoDB Atlas connection string.
+
 ## Usage
 
 Start the server:
 
 ```sh
-npm run dev
-```
-
-Start the server:
-
-```sh
-npm run dev
+npm start
 ```
 
 The server will run at `http://localhost:3000`.
