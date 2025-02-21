@@ -13,6 +13,9 @@ Bangladesh GeoAPI is a free and open API providing geographical data of Banglade
 - Express Js
 - Mongodb Atlas
 
+## Live Demo
+[Click me](https://bdgeo.vercel.app/)
+
 ## Installation
 
 Clone the repository and install dependencies:
